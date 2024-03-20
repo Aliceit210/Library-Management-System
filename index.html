@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>library management system</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li><a href="#"><i class="fa-solid fa-book"></i> E-Books</a></li>
+          <li><a href="#"><i class="fa-solid fa-circle-info"></i> About us</a></li>
+          <li><a href="#"><i class="fa-solid fa-phone"></i> Contact us</a></li>
+          <li><a href="#"><i class="fa-solid fa-user"></i> story</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <aside>
+      <div class="logo-container">
+        <img class="wbm-logo" src="assets/logo.PNG" alt="WBMH">
+        <p class="app-name">Store books with us</p>
+      </div>
+      <form>
+        <div class="title-input">
+          <label for="book-title">Please input the title of the book: <span class="abbrv">*</span></label>
+          <input type="text" name="book-title" id="book-title" autocomplete="off" required placeholder="Title">
+          <span class="error-message"></span>
+        </div>
+        <div class="author-input">
+          <label for="author-name">Please input the name of the author: <span class="abbrv">*</span></label>
+          <input type="text" name="author-name" id="author-name" autocomplete="off" required placeholder="Author">
+          <span class="error-message"></span>
+        </div>
+        <div class="pages-input">
+          <label for="pages-number">Please input the total pages of the book: <span class="abbrv">*</span></label>
+          <input type="text" name="pages-number" id="pages-number" minlength="1" autocomplete="off" required placeholder="1">
+          <span class="error-message"></span>
+        </div>
+        <div class="read-checkbox">
+          <input type="checkbox" name="read-status" id="read-check">
+          <label for="read-check">Have you read already this book?</label>
+        </div>
+        <div class="add-btn"> 
+          <input id="add-book" class="hi" type="button" value="ADD A NEW BOOK">
+        </div>
+        <div class="remove-btn"> 
+          <input id="remove-all" type="button" value="REMOVE ALL BOOKS">
+        </div>
+      </form>
+    </aside>
+
+    <main>
+      <div id="book-information">
+        <table id="lib-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Pages</th>
+              <th>Status</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="book-body"></tbody>
+        </table>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Copyright&copy; 
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Uwimana Aliceit210
+        &nbsp;<a id="github" href="https://github.com/Aliceit210?tab=repositories" target="_blank"><i class="fa-brands fa-github" style="color: pink;"></i></a>
+      </p>
+    </footer>
+  <script src="src/index.js"></script>
+</body>
+</html>
